@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   def new
-    @book=Lisy.new
-    
+    @book=Book.new
+
   end
 
   def index
