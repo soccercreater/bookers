@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   get 'books/new'
-  post'books'=>'book#create'
+  post'books'=>'books#create'
 
   get 'books/index'
-  get 'books/show'
+  get 'books'=>'books#index'
+
+  get 'books/:id'=>'books#show'
   get 'books/edit'
 
 
