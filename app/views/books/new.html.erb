@@ -1,12 +1,10 @@
 <h1>Books</h1>
 <% if @book.errors.any? %>
   <%= @book.errors.count%>件のエラーが発生しました
-
-  <ul>
-    <% @book.errors.full_messages.each do |messages|%>
+  <% @book.errors.full_messages.each do |messages|%>
       <li><%= messages %></li>
       <% end %>
-  </ul>
+
  <% end %>
 
 
