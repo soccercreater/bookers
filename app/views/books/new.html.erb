@@ -1,5 +1,14 @@
 <h1>Books</h1>
-<%= form_with model:@book,local:true do |f| %>
+<% if @book.errors.any? %>
+  <%= @book.errors.count%>件のエラーが発生しました
+  <% @book.errors.full_messages.each do |messages|%>
+      <li><%= messages %></li>
+      <% end %>
+
+ <% end %>
+
+
+<%=form_with model:@book, url: '/books', method: :post, local:true do |f| %>
 
 <h2>New book</h2>
   <p>Title</p>
@@ -10,4 +19,7 @@
 
 <%= f.submit'Create Book'%>
 
+
 <% end %>
+
+
