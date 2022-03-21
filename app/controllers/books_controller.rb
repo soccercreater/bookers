@@ -35,7 +35,8 @@ class BooksController < ApplicationController
      redirect_to book_path(@book.id)
 
   else
-    @books=Book.all
+    @books=Books
+    binding.pry
      render :index
   end
   end
